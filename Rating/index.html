@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/styles/style.css">
+    <script src="src/scirpts/script.js" defer></script>
+    <title>Rating</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="rating-container">
+            <div class="rate-emoji">
+                <img src="./public/images/love.png" id="expressions" alt="Star emotion image">
+            </div>
+            <div class="rate-container">
+                <p class="rate-text">How would you rate our app experience?</p>
+                <div class="star-container">
+                    <ul class="star-list">
+                        <li class="star">
+                            <img src="./public/images/star-bg.svg" alt="star">
+                        </li>
+                        <li class="star">
+                            <img src="./public/images/star-bg.svg" alt="star">
+                        </li>
+                        <li class="star">
+                            <img src="./public/images/star-bg.svg" alt="star">
+                        </li>
+                        <li class="star">
+                            <img src="./public/images/star-bg.svg" alt="star">
+                        </li>
+                        <li class="star">
+                            <img src="./public/images/star-bg.svg" alt="star">
+                        </li>
+                    </ul>
+                </div>
+                <button class="btn btn-submit" disabled="true">Submit</button>
+                <button class="btn btn-ignore">no, thanks!</button>
+            </div>
+            <div class="result-container">
+                <p class="r-text">You rated <span class="rate">4</span> out of 5</p>
+                <span>Thank you!</span>
+                <p>We appreciate you taking the time to give a rating. If you ever need more support, don’t hesitate to
+                    get in touch!</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

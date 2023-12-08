@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+:root {
+    --white: #fff;
+    --violet: #6C63FF;
+    --grayish: #C8C8C8;
+    --black: #4D4C59;
+    --light-grayish: #9C9AB6;
+
+    /* Font */
+    --ff-p: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    font-family: var(--ff-p);
+    background-image: url("../../public/images/top-image.svg"), url("../../public/images/bottom-image.svg");
+    background-position: left top, right bottom;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.container {
+    width: 90%;
+    margin-inline: auto;
+    padding: 50px 0;
+}
+
+
+
+img {
+    width: 100%;
+    display: block;
+}
+
+.launch-time {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (min-width:800px) {
+    .container {
+        width: 90%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .launch-time {
+        order: 1;
+        margin-top: 0px;
+        transform: scale(0.9);
+    }
+
+    .launch-img {
+        order: 2;
+    }
+}
+
+@media (min-width:1000px) {
+    .launch-time {
+        transform: scale(1);
+    }
+}
+
+@media (min-width:1200px) {
+    .launch-time {
+        transform: scale(1.2);
+    }
+}
+
+.title {
+    color: var(--violet);
+    font-weight: 700;
+    font-size: 2rem;
+    letter-spacing: 3.78px;
+    text-transform: uppercase;
+}
+
+.time {
+    font-size: 3rem;
+    font-weight: 400;
+    color: var(--black);
+    text-align: center;
+    display: grid;
+    grid-template-columns: 3fr 1fr 3fr 1fr 3fr 1fr 3fr;
+    gap: 6px;
+    justify-content: space-around;
+}
+
+.time-details {
+    margin-top: 50px;
+}
+
+@media (min-width:455px) {
+    .time {
+        font-size: 4.5rem;
+    }
+}
+
+.days, .hours, .minutes, .seconds {
+    position: relative;
+}
+
+.days::after, .hours::after, .minutes::after, .seconds::after {
+    content: "Day";
+    color: var(--grayish);
+    font-size: 0.875rem;
+    font-weight: 300;
+    text-transform: capitalize;
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.hours::after {
+    content: "hours"
+}
+
+.minutes::after {
+    content: "minutes";
+}
+
+.seconds::after {
+    content: "seconds";
+}
+
+.txt {
+    color: var(--light-grayish);
+    font-size: 0.875rem;
+    font-weight: 400;
+    text-align: center;
+    margin: 30px 0 40px;
+}
+
+.btn {
+    border: none;
+    background-color: var(--violet);
+    color: var(--white);
+    padding: 10px 35px;
+    text-transform: capitalize;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+@media (min-width:800px) {
+    .txt {
+        margin: 10px 0 30px;
+    }
+}
