@@ -4,7 +4,7 @@
 
 Live url: https://rajiv-0920.github.io/Interactive-Rating/
 
-![Screenshot 2023-12-07 123354](https://github.com/Rajiv-0920/100_JavaScript_Projects/assets/133740418/0a7ece94-c4fc-4888-863a-f8176a88d5dd)
+![Screenshot (10)](https://github.com/Rajiv-0920/100_JavaScript_Projects/assets/133740418/5c45a08d-e1f4-45ba-a81a-936586e75342)
 
 # Employee_Stats
 
