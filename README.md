@@ -20,6 +20,12 @@ Live url: https://rajiv-0920.github.io/Countdown/
 
 ![Screenshot (9)](https://github.com/Rajiv-0920/Countdown/assets/133740418/ea7501b7-9fa5-4e4f-95ee-a1365fb1c64f)
 
+# Tip Calculator
+
+Live url: https://rajiv-0920.github.io/Tip-calculator-app/
+
+![Screenshot (11)](https://github.com/Rajiv-0920/100_JavaScript_Projects/assets/133740418/3d085270-1118-48a9-b4ff-6c49d2e41ba7)
+
 # Rotate Image Gallery
 
 Live url: https://rajiv-0920.github.io/Rotate-Image-Gallery/
