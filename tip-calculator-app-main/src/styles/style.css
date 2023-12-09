@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+:root {
+    --StrongCyan: hsl(172, 67%, 45%);
+    --VeryDarkCyan: hsl(183, 100%, 15%);
+    --DarkGrayishCyan: hsl(186, 14%, 43%);
+    --GrayishCyan: hsl(184, 14%, 56%);
+    --LightGrayishCyan: hsl(185, 41%, 84%);
+    --VeryLightGrayishCyan: hsl(189, 41%, 97%);
+
+    --White: hsl(0, 0%, 100%);
+    --error: #ff3b00;
+
+    --fs-Input: 1.5rem;
+    --ff-Mono: 'Space Mono', monospace;
+    --fw-700: 700;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding-top: 50px;
+    min-height: 100vh;
+    background-color: var(--LightGrayishCyan);
+    font-family: var(--ff-Mono);
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+
+input {
+    text-align: right;
+    font-size: var(--fs-Input);
+    font-family: var(--ff-Mono);
+    border: none;
+    background-color: var(--VeryLightGrayishCyan);
+    color: var(--VeryDarkCyan);
+    width: 100%;
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+
+input:focus {
+    outline: 2.5px solid var(--StrongCyan);
+}
+
+input::placeholder {
+    color: var(--DarkGrayishCyan);
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+label {
+    color: var(--GrayishCyan);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.tip-calc {
+    background-color: var(--White);
+    padding: 20px;
+    border-radius: 20px 20px 0 0;
+    min-height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+@media (min-width: 600px) {
+    .container {
+        margin: 50px 20px;
+        gap: 40px;
+    }
+
+    .tip-calc {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        border-radius: 20px;
+    }
+}
+
+@media (min-width: 800px) {
+    .container {
+        margin: 50px 20px;
+        gap: 50px;
+    }
+
+    .tip-calc {
+        padding: 30px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        width: 900px;
+    }
+}
+
+.calc-details form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.num-people, .bill-container {
+    position: relative;
+}
+
+.num-people::before, .bill-container::before {
+    content: "";
+    position: absolute;
+    top: 43px;
+    left: 20px;
+    display: block;
+    background-image: url("../../images/icon-person.svg");
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+}
+
+.bill-container::before {
+    background-image: url("../../images/icon-dollar.svg");
+}
+
+.bill-container, .tip-perc-container, .num-people {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.perc-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+@media (min-width: 800px) {
+    .perc-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.perc-container div {
+    background-color: var(--VeryDarkCyan);
+    color: var(--White);
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.perc-container div:hover {
+    background-color: var(--LightGrayishCyan);
+    color: var(--VeryDarkCyan);
+}
+
+.perc-container div.active {
+    background-color: var(--StrongCyan);
+    color: var(--VeryDarkCyan);
+}
+
+.result-container {
+    background-color: var(--VeryDarkCyan);
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.result-container>div {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.amount {
+    font-size: 2rem;
+    color: var(--StrongCyan)
+}
+
+.text {
+    color: var(--White);
+}
+
+.text span {
+    color: var(--DarkGrayishCyan);
+    font-size: 0.8rem;
+}
+
+.btn {
+    background-color: var(--StrongCyan);
+    border: none;
+    font-family: var(--ff-Mono);
+    padding: 10px;
+    text-transform: uppercase;
+    color: var(--VeryDarkCyan);
+    border-radius: 5px;
+    margin-top: auto;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--LightGrayishCyan);
+}
+
+.error-txt {
+    display: none;
+}
+
+.error-txt.error {
+    display: block;
+    position: absolute;
+    right: 0;
+    color: var(--error);
+}
+
+.people-input.error {
+    outline: 2.5px solid var(--error);
+}
+
+.attribution {
+    display: none;
+}
+
+@media (min-width:600px) {
+    .attribution {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        background-color: var(--White);
+        width: 100%;
+        padding: 10px;
+        font-size: 11px;
+        text-align: center;
+    }
+
+    .attribution a {
+        color: var(--error);
+    }
+}
