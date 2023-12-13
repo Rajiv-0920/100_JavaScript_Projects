@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;700&display=swap');
+
+:root {
+    --ff: 'Rajdhani', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--ff);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: hsla(0, 0%, 100%, 1);
+
+    background: radial-gradient(circle, hsla(0, 0%, 100%, 1) 0%, hsla(202, 100%, 50%, 1) 100%);
+
+    background: -moz-radial-gradient(circle, hsla(0, 0%, 100%, 1) 0%, hsla(202, 100%, 50%, 1) 100%);
+
+    background: -webkit-radial-gradient(circle, hsla(0, 0%, 100%, 1) 0%, hsla(202, 100%, 50%, 1) 100%);
+
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#FFFFFF", endColorstr="#00A2FF", GradientType=1);
+}
+
+.container {
+    width: 90%;
+    margin-inline: auto;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 0 20px #0c356a61;
+}
+
+.counter-title {
+    margin-bottom: 20px;
+    color: #0C356A;
+    font-size: 3rem;
+}
+
+.counter-body {
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    column-gap: 10px;
+}
+
+.btn {
+    border: none;
+    border-radius: 5px;
+    font-size: 1.3rem;
+    padding: 10px 25px;
+    cursor: pointer;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+.counter-increase {
+    background-color: #64CCC5;
+}
+
+.counter-decrease {
+    background-color: #D80032;
+    color: #fff;
+}
+
+.reset {
+    background-color: #164863;
+    grid-column: 2/3;
+}
+
+.counter {
+    font-size: 5rem;
+    color: #279EFF;
+    font-weight: 700;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+@media (min-width:500px) {
+    .container {
+        width: 363px;
+        padding: 30px;
+        transform: scale(1.2);
+    }
+
+    .counter-body {
+        column-gap: 30px;
+    }
+
+}
