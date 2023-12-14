@@ -46,15 +46,16 @@ Live url: https://rajiv-0920.github.io/Employee_Stats/
 
 1. document.querySelectorAll("")
 2. document.querySelector("")
-3. new Date()
-4. Array
-5. setInterval()
-6. innerText
-7. forEach
-8. dataset
-9. Math.floor()
-10. switch
-11. function
+3. addEventListner()
+4. new Date()
+5. Array
+6. setInterval()
+7. innerText
+8. forEach
+9. dataset
+10. Math.floor()
+11. switch
+12. function
 
 # Countdown
 
@@ -65,16 +66,31 @@ Live url: https://rajiv-0920.github.io/Countdown/
 ## Key Concept Cover
 
 1. document.querySelector();
-2. setInterval()
-3. new Date()
-4. Math.floor()
-5. innerText
+2. addEventListner()
+3. setInterval()
+4. new Date()
+5. Math.floor()
+6. innerText
 
 # Tip Calculator
 
 Live url: https://rajiv-0920.github.io/Tip-calculator-app/
 
 ![Screenshot (11)](https://github.com/Rajiv-0920/100_JavaScript_Projects/assets/133740418/3d085270-1118-48a9-b4ff-6c49d2e41ba7)
+
+## Key Concept Cover
+
+1. document.getElementById("")
+2. document.querySelectorAll("")
+3. document.querySelector("")
+4. addEventListner()
+5. Function
+6. classList
+7. forEach
+8. Array.form()
+9. dataset
+10. toFixed()
+11. location.reload()
 
 # Rotate Image Gallery
 
