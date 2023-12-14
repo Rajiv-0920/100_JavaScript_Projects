@@ -62,6 +62,14 @@ Live url: https://rajiv-0920.github.io/Countdown/
 
 ![Screenshot (9)](https://github.com/Rajiv-0920/Countdown/assets/133740418/ea7501b7-9fa5-4e4f-95ee-a1365fb1c64f)
 
+## Key Concept Cover
+
+1. document.querySelector();
+2. setInterval()
+3. new Date()
+4. Math.floor()
+5. innerText
+
 # Tip Calculator
 
 Live url: https://rajiv-0920.github.io/Tip-calculator-app/
