@@ -42,6 +42,20 @@ Live url: https://rajiv-0920.github.io/Employee_Stats/
 
 ![Screenshot (6)](https://github.com/Rajiv-0920/Employee_Stats/assets/133740418/df4645d2-ba8d-478e-a678-3c8874a9a37c)
 
+## Key Concept Cover
+
+1. document.querySelectorAll("")
+2. document.querySelector("")
+3. new Date()
+4. Array
+5. setInterval()
+6. innerText
+7. forEach
+8. dataset
+9. Math.floor()
+10. switch
+11. function
+
 # Countdown
 
 Live url: https://rajiv-0920.github.io/Countdown/
