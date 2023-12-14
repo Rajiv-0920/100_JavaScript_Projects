@@ -20,6 +20,20 @@ Live url: https://rajiv-0920.github.io/Interactive-Rating/
 
 ![Screenshot (10)](https://github.com/Rajiv-0920/100_JavaScript_Projects/assets/133740418/5c45a08d-e1f4-45ba-a81a-936586e75342)
 
+## Key Concept Cover
+
+1. document.getElementById("")
+2. document.querySelectorAll("")
+3. document.querySelector("")
+4. Object
+5. forEach
+6. addEventListner()
+7. disabled
+8. src
+9. innerText
+10. classList
+11. history.back()
+
 # Employee_Stats
 
 Full Responsive Employee Stats website With counting animation using HTML CSS and JavaScript.
