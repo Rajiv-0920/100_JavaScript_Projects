@@ -34,7 +34,7 @@ Live url: https://rajiv-0920.github.io/Interactive-Rating/
 10. classList
 11. history.back()
 
-# Employee_Stats
+## Employee_Stats
 
 Full Responsive Employee Stats website With counting animation using HTML CSS and JavaScript.
 
@@ -57,7 +57,7 @@ Live url: https://rajiv-0920.github.io/Employee_Stats/
 11. switch
 12. function
 
-# Countdown
+## Countdown
 
 Live url: https://rajiv-0920.github.io/Countdown/
 
@@ -72,7 +72,7 @@ Live url: https://rajiv-0920.github.io/Countdown/
 5. Math.floor()
 6. innerText
 
-# Tip Calculator
+## Tip Calculator
 
 Live url: https://rajiv-0920.github.io/Tip-calculator-app/
 
@@ -92,7 +92,7 @@ Live url: https://rajiv-0920.github.io/Tip-calculator-app/
 10. toFixed()
 11. location.reload()
 
-# Rotate Image Gallery
+## Rotate Image Gallery
 
 Live url: https://rajiv-0920.github.io/Rotate-Image-Gallery/
 
@@ -105,7 +105,7 @@ Live url: https://rajiv-0920.github.io/Rotate-Image-Gallery/
 3. style.transform
 4. addEventListner
 
-# Random Color Generator
+## Random Color Generator
 
 Live url: https://rajiv-0920.github.io/Random-Color-Generator/
 
@@ -134,7 +134,7 @@ Live url: https://rajiv-0920.github.io/Random-Color-Generator/
 19. classList.add()
 20. classList.remove()
 
-# Frontend Mentor - Coding bootcamp testimonials slider
+## Frontend Mentor - Coding bootcamp testimonials slider
 
 Live Url: https://rajiv-0920.github.io/Coding-Bootcamp-Testimonials-Slider/
 
