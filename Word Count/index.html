@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Count</title>
+    <link rel="stylesheet" href="src/styles/style.css">
+    <script src="src/scripts/script.js" defer></script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <header>
+            <h1 class="title">Word Count</h1>
+            <p>A simple and free word counter and character counter.</p>
+        </header>
+
+        <main>
+            <div class="container">
+                <div class="text-box">
+                    <textarea id="input-text" name="input-text" rows="10" cols="50"
+                        placeholder="Type or paste your text"></textarea>
+                </div>
+
+                <div class="word-count">
+                    <div class="word">
+                        <span id="words" class="num">0</span>
+                        <span class="txt">Word</span>
+                    </div>
+
+                    <div class="characters">
+                        <span id="characters" class="num">0</span>
+                        <span class="txt">Characters</span>
+                    </div>
+
+                    <div class="characters-space">
+                        <span id="characterWithoutSpace" class="num">0</span>
+                        <span class="txt">Characters without space</span>
+                    </div>
+
+                    <div class="sentence">
+                        <span id="sentence" class="num">0</span>
+                        <span class="txt">Sentence</span>
+                    </div>
+
+                    <div class="paragraphs">
+                        <span id="paragraphs" class="num">0</span>
+                        <span class="txt">Paragraphs</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>
