@@ -82,9 +82,15 @@ main {
     padding: 10px;
     border-radius: 25px;
     text-align: center;
-    font-size: 1.3rem;
+    font-size: 1rem;
     letter-spacing: 0.8px;
     user-select: none;
+}
+
+@media (min-width:400px) {
+    .result {
+        font-size: 1.3rem;
+    }
 }
 
 .actions {
