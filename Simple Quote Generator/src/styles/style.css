@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Marmelad&family=Nunito+Sans:opsz,wght@6..12,300;6..12,400;6..12,700&family=Red+Hat+Mono:wght@700&display=swap');
+
+:root {
+    --white: #fff;
+    --black: #000;
+    --green: #25D366;
+    --grayish: #445069;
+    --light-grayish: #44506937;
+    --red: #FF1700;
+    --dark-red: #c21e3a;
+    --very-dark-red: hsla(274, 65%, 12%, 1);
+    --dark-blue: #0C356A;
+
+    --ff-n: 'Nunito Sans', sans-serif;
+    --ff-m: 'Marmelad', sans-serif;
+    --ff-s: 'Red Hat Mono', monospace;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    font-family: var(--ff-s);
+    position: relative;
+    transition: 0.3s;
+
+    background: var(--dark-red);
+    background: linear-gradient(90deg, var(--dark-red) 0%, var(--very-dark-red) 100%);
+    background: -moz-linear-gradient(90deg, var(--dark-red) 0%, var(--very-dark-red) 100%);
+    background: -webkit-linear-gradient(90deg, var(--dark-red) 0%, var(--very-dark-red) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#C11E38", endColorstr="#220B34", GradientType=1);
+}
+
+body::after {
+    content: "";
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-image: url("../../public/images/blob.svg");
+    background-position: center;
+    background-size: 700px;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+button {
+    font-family: var(--ff-n);
+}
+
+
+.container {
+    background-color: var(--white);
+    padding: 25px;
+    border-radius: 10px;
+    width: min(90%, 550px);
+    display: grid;
+    gap: 30px;
+    box-shadow: 0 1px 2px rgba(7, 28, 67, 0.07), 0 2px 4px rgba(7, 28, 67, 0.07), 0 4px 8px rgba(7, 28, 67, 0.07), 0 8px 16px rgba(7, 28, 67, 0.07), 0 16px 32px rgba(7, 28, 67, 0.07), 0 32px 64px rgba(7, 28, 67, 0.07);
+}
+
+header {
+    display: grid;
+    gap: 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.279);
+    padding-bottom: 30px;
+}
+
+@media (min-width:550px) {
+    header {
+        grid-template-columns: auto auto;
+        justify-content: space-between;
+    }
+}
+
+.list-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 0%;
+    width: min(90%, 550px);
+    background-color: var(--white);
+    border-radius: 10px;
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: 0.5s;
+    z-index: 2;
+}
+
+.list-container.show {
+    height: 90%;
+    grid-template-rows: 1fr;
+    padding: 20px;
+}
+
+.select-quote {
+    padding: 8px 30px;
+    border: 1px solid var(--light-grayish);
+    background-color: #44506922;
+    color: var(--dark-blue);
+    border-radius: 5px;
+    width: max-content;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+.list {
+    overflow: auto;
+    width: 100%;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 13px;
+    transition: 0.5s;
+}
+
+.list::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+.list::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+
+/* Handle */
+.list::-webkit-scrollbar-thumb {
+    background: rgba(9, 38, 59, 0.358);
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+.list::-webkit-scrollbar-thumb:hover {
+    background: rgba(9, 38, 59, 0.496);
+}
+
+.list-item {
+    flex: 1 1 auto;
+    border: 1px solid var(--light-grayish);
+    text-align: center;
+    font-family: var(--ff-n);
+    padding: 5px 20px;
+    border-radius: 15px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.list-item.random {
+    background-color: var(--dark-blue);
+    color: var(--white);
+}
+
+.list-item.random:hover {
+    opacity: 0.8;
+}
+
+.list-item.active {
+    background-color: var(--dark-red);
+    color: var(--white);
+    border: 1px solid transparent;
+}
+
+.list-item:not(.active, .random):hover {
+    background-color: #9ba4b522;
+    color: var(--dark-blue);
+}
+
+.overlay {
+    background-color: transparent;
+    transition: 0.3s;
+}
+
+body.overlay::after {
+    content: "";
+    display: block;
+    position: absolute;
+    inset: 0;
+    background-color: rgba(15, 25, 65, 0.333);
+    height: 100vh;
+    width: 100vw;
+}
+
+.title {
+    color: var(--dark-blue);
+    font-size: 1.7rem;
+}
+
+@media (min-width:550px) {
+    .title {
+        font-size: 2rem;
+    }
+}
+
+main {
+    display: grid;
+    gap: 25px;
+}
+
+.quote-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+    font-family: var(--ff-m);
+    text-align: center;
+}
+
+.hide {
+    display: none;
+}
+
+
+.quote {
+    font-size: 1.5rem;
+    color: var(--red);
+}
+
+@media (min-width:550px) {
+    .quote {
+        font-size: 1.8rem;
+    }
+}
+
+.author {
+    color: var(--grayish);
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid rgba(0, 0, 0, 0.279);
+    padding-top: 25px;
+}
+
+.btn-twitter, .btn-whatsapp {
+    font-size: 1.5rem;
+    color: var(--grayish);
+    transition: 0.3s;
+    padding: 5px 15px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn-twitter:hover, .btn-whatsapp:hover {
+    background-color: #9ba4b522;
+}
+
+.btn-twitter:hover {
+    color: var(--black);
+}
+
+.btn-whatsapp:hover {
+    color: var(--green);
+}
+
+.btn-generate {
+    margin-left: auto;
+    font-size: 1.2rem;
+    padding: 8px 30px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--dark-red);
+    color: var(--white);
+    cursor: pointer;
+    transition: 0.4s;
+
+    box-shadow: 0 1px 1px rgba(136, 4, 31, 0.158), 0 2px 2px rgba(136, 4, 31, 0.158), 0 4px 4px rgba(136, 4, 31, 0.158), 0 6px 8px rgba(136, 4, 31, 0.158), 0 8px 16px rgba(136, 4, 31, 0.158);
+}
+
+.btn-generate:hover {
+    opacity: 0.87;
+}
+
+.btn-generate:disabled {
+    background-color: #445069;
+    cursor: default;
+    box-shadow: 0 1px 1px #4450691c, 0 2px 2px #4450691c, 0 4px 4px #4450691c, 0 6px 8px #4450691c, 0 8px 16px #4450691c;
+}
+
+/* Loading Effect */
+
+.loader {
+    width: 50px;
+    height: 50px;
+    display: none;
+    border: 5px solid rgb(255, 17, 0);
+    border-radius: 50%;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    animation: rot5 1s infinite;
+    margin: 20px auto;
+}
+
+.loader.show {
+    display: block;
+}
+
+@keyframes rot5 {
+    0% {
+        transform: rotate(0);
+    }
+
+    50% {
+        transform: rotate(180deg);
+        border-top-color: rgb(139, 46, 46);
+        border-bottom-color: rgb(243, 92, 33);
+        border-right-color: transparent;
+        border-left-color: transparent;
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

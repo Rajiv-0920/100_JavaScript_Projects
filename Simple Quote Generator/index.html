@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <link rel="stylesheet" href="src/styles/style.css">
+    <script src="src/scripts/script.js" defer></script>
+    <title>Simple Quote Generator</title>
+</head>
+
+<body class=""><!-- overlay -->
+    <div class="container">
+        <header>
+            <h1 class="title">Quote of the Day</h1>
+
+            <div class="choice-quote">
+                <button id="select-quote" class="btn select-quote">
+                    Random
+                </button>
+
+                <div class="list-container">
+                    <ul class="list"> <!-- show -->
+                        <li class="list-item random active">Random</li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="quote-container">
+                <p class="quote"></p>
+                <p class="author"></p>
+            </div>
+
+            <div class="loader"></div>
+
+            <div class="actions">
+                <a href="#" id="btn-twitter" class="btn-twitter">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+
+                <a href="#" id="btn-whatsapp" class="btn-whatsapp">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+
+                <button id="btn-generate" class="btn btn-generate">Get a quote</button>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>
