@@ -232,7 +232,7 @@ Live Url: https://Rajiv-0920.github.io/QR-Code-Generator/
 18. fetch
 19. innerHTML
 
-## Bar Code Contents
+## QR Code Contents
 
 ### E-mail address
 
