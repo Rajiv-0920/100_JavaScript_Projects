@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <link rel="stylesheet" href="./src/styles/style.css">
+    <script src="src/scripts/script.js" defer></script>
+
+    <title>QR Code Generator</title>
+</head>
+
+<body class=""> <!-- overlay -->
+    <div class="fluid-container">
+        <h1 class="title">QR Code Generator</h1>
+        <div class="container">
+            <div class="qr-type">
+                <div class="type-container" data-type="text">
+                    <img src="./public/images/text.svg" alt="Text img">
+                    <p class="type-text">Text</p>
+                </div>
+
+                <div class="type-container" data-type="email">
+                    <img src="./public/images/email.svg" alt="Email img">
+                    <p class="type-text">Email</p>
+                </div>
+
+                <div class="type-container" data-type="phone">
+                    <img src="./public/images/phone.svg" alt="Phone img">
+                    <p class="type-text">Phone</p>
+                </div>
+
+                <div class="type-container" data-type="wifi">
+                    <img src="./public/images/wifi.svg" alt="Wifi img">
+                    <p class="type-text">Wifi</p>
+                </div>
+
+                <div class="type-container" data-type="contact">
+                    <img src="./public/images/contact.svg" alt="Contact img">
+                    <p class="type-text">Contact</p>
+                </div>
+
+                <div class="type-container" data-type="facebook">
+                    <img src="./public/images/facebook.svg" alt="Facebook img">
+                    <p class="type-text">Facebook</p>
+                </div>
+
+                <div class="type-container" data-type="twitter">
+                    <img src="./public/images/x.svg" alt="Twitter">
+                    <p class="type-text">Twitter</p>
+                </div>
+
+                <div class="type-container" data-type="whatsapp">
+                    <img src="./public/images/whatsapp.svg" alt="Whatsapp img">
+                    <p class="type-text">Whatsapp</p>
+                </div>
+
+                <div class="type-container" data-type="sms">
+                    <img src="./public/images/sms.svg" alt="SMS img">
+                    <p class="type-text">SMS</p>
+                </div>
+
+                <div class="type-container" data-type="instagram">
+                    <img src="./public/images/instagram.svg" alt="Instagram img">
+                    <p class="type-text">Instagram</p>
+                </div>
+
+                <div class="type-container" data-type="linkedin">
+                    <img src="./public/images/linkedin.svg" alt="Linkedin">
+                    <p class="type-text">Linkedin</p>
+                </div>
+
+                <div class="type-container" data-type="website">
+                    <img src="./public/images/link.svg" alt="Website img">
+                    <p class="type-text">Website</p>
+                </div>
+
+                <!-- <div class="type-container" data-type="calendars">
+                    <img src="./public/images/calendar.svg" alt="Calendar img">
+                    <p class="type-text">Calendar</p>
+                </div> -->
+
+                <div class="type-container" data-type="location">
+                    <img src="./public/images/location.svg" alt="Location">
+                    <p class="type-text">Location</p>
+                </div>
+
+                <div class="type-container" data-type="youtube">
+                    <img src="./public/images/youtube.svg" alt="Youtube">
+                    <p class="type-text">Youtube</p>
+                </div>
+            </div>
+
+
+            <div class="type-form">
+                <div class="form text-form form-container" data-type="text"> <!-- show -->
+                    <div>
+                        <label for="text-input">Text</label>
+                        <textarea name="text-input" class="" id="text-input" cols="30" rows="10"
+                            placeholder="Type something here..."></textarea>
+                    </div>
+                </div>
+
+                <div class="form email-form form-container" data-type="email">
+                    <div>
+                        <label for="e-mail">E-mail</label>
+                        <input type="email" name="e-mail" id="e-mail" placeholder="Enter your email...">
+                    </div>
+                    <div>
+                        <label for="subject">subject</label>
+                        <input type="text" name="subject" id="subject" placeholder="Enter your subject...">
+                    </div>
+                    <div>
+                        <label for="content">Content</label>
+                        <textarea name="content" id="content" cols="30" rows="10"
+                            placeholder="Enter your email content..."></textarea>
+                    </div>
+                </div>
+
+                <div class="form phone-form form-container" data-type="phone">
+                    <div>
+                        <label for="phone">Phone number</label>
+                        <input type="number" name="phone" id="phone" placeholder="Enter your number...">
+                    </div>
+                </div>
+
+                <div class="form wifi-form form-container" data-type="wifi">
+                    <div>
+                        <label for="network-name">Network name (SSID)</label>
+                        <input type="text" name="network-name" id="network-name">
+                    </div>
+                    <div class="wifi-security">
+                        <label for="security">Security</label>
+                        <select name="security" id="security">
+                            <option value="WPA">WPA/WP2</option>
+                            <option value="WEP">WEP</option>
+                            <option value="blank">None</option>
+                        </select>
+                    </div>
+                    <div class="isHidden">
+                        <label for="hidden">Hidden</label>
+                        <input type="checkbox" name="hidden" id="hidden">
+
+                    </div>
+
+                    <div>
+                        <label for="network-password">Password</label>
+                        <input type="text" name="network-password" id="network-password">
+                    </div>
+                </div>
+
+                <div class="form contact-form form-container" data-type="contact">
+                    <div>
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name" autocomplete="true">
+                    </div>
+                    <div>
+                        <label for="phone-number">Phone number</label>
+                        <input type="number" name="phone-number" id="phone-number" autocomplete="true">
+                    </div>
+
+                    <div>
+                        <label for="address">Address</label>
+                        <input type="text" name="address" id="address" autocomplete="true">
+                    </div>
+
+                    <div>
+                        <label for="contact-email">E-mail</label>
+                        <input type="text" name="contact-email" id="contact-email" autocomplete="true">
+                    </div>
+
+                    <div>
+                        <label for="company">Company</label>
+                        <input type="text" name="company" id="company" autocomplete="true">
+                    </div>
+
+                    <div>
+                        <label for="website">Website</label>
+                        <input type="text" name="website" id="website" autocomplete="true">
+                    </div>
+                </div>
+
+                <div class="form facebook-form form-container" data-type="facebook">
+                    <div>
+                        <label for="facebook-link">Facebook</label>
+                        <input type="text" name="facebook-link" id="facebook-link"
+                            placeholder="Enter your Facebook profile link...">
+                    </div>
+                </div>
+
+                <div class="form twitter-form form-container" data-type="twitter">
+                    <div>
+                        <label for="twitter-link">Twitter</label>
+                        <input type="text" name="twitter-link" id="twitter-link" placeholder="Enter your Twitter id...">
+                    </div>
+                </div>
+
+                <div class="form whatsapp-form form-container" data-type="whatsapp">
+                    <div class="flag-code-container">
+                        <div class="flag">
+                            <img src="https://flagcdn.com/in.svg" id="flag" alt="flag">
+                        </div>
+                        <div class="alpha-3-code">
+                            <select name="country" id="countries">
+                            </select>
+                        </div>
+                        <div>
+                            <span class="phone-code" id="ph-code">+91</span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="whatsapp-number">Whatsapp</label>
+                        <input type="number" name="whatsapp-number" id="whatsapp-number" placeholder="Phone Number...">
+                    </div>
+                </div>
+
+                <div class="form sms-form form-container" data-type="sms">
+                    <div>
+                        <label for="sms-number">Phone Number</label>
+                        <input type="number" name="sms-number" id="sms-number" placeholder="Enter your phone number...">
+                    </div>
+                    <div>
+                        <label for="sms-message">Message</label>
+                        <textarea name="sms-message" id="sms-message" cols="30" rows="10"
+                            placeholder="Enter your message..."></textarea>
+                    </div>
+                </div>
+
+                <div class="form instagram-form form-container" data-type="instagram">
+                    <div>
+                        <label for="instagram-id">Instagram</label>
+                        <input type="text" name="instagram-id" id="instagram-id"
+                            placeholder="Enter your Instagram id...">
+                    </div>
+                </div>
+
+                <div class="form linkedin-form form-container" data-type="linkedin">
+                    <div>
+                        <label for="linkedin-link">Linkedin</label>
+                        <input type="text" name="linkedin-link" id="linkedin-link"
+                            placeholder="Enter your Linkedin profile link...">
+                    </div>
+                </div>
+
+                <div class="form website-form form-container" data-type="website">
+                    <div>
+                        <label for="website-link">URL</label>
+                        <input type="text" name="website-link" id="website-link"
+                            placeholder="Enter your Website address...">
+                    </div>
+                </div>
+
+                <div class="form location-form form-container" data-type="location">
+                    <div>
+                        <label for="latitude">Latitude</label>
+                        <input type="number" name="latitude" id="latitude">
+                    </div>
+                    <div>
+                        <label for="logitude">Longitude</label>
+                        <input type="number" name="longitude" id="longitude">
+                    </div>
+                </div>
+
+                <div class="form youtube-form form-container" data-type="youtube">
+                    <div>
+                        <label for="youtube-link">Youtube</label>
+                        <input type="text" name="youtube-link" id="youtube-link"
+                            placeholder="Enter your youtube link...">
+                    </div>
+                </div>
+                <button id="btn-create" class="btn-create">Create</button>
+            </div>
+
+            <div class="qr-code-container "> <!-- show -->
+                <div class="close" id="btn-close">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+                <div class="qr-code">
+                    <img src="" id="qr-img" alt="">
+                </div>
+                <p class="info qr-for">Text QR Code</p>
+                <p class="info">Take Screenshot and Save the QR Code.</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
