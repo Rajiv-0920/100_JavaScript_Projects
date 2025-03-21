@@ -1,4 +1,4 @@
-# 100_JavaScript_Projects
+# 10_JavaScript_Projects
 
 ## Counter
 
